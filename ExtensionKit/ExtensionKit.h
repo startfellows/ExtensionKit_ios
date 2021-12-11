@@ -2,7 +2,6 @@
 //  ExtensionKit.h
 //  ExtensionKit
 //
-//  Created by Кирилл on 18.12.2021.
 //
 
 #import <Foundation/Foundation.h>
