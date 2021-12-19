@@ -42,10 +42,10 @@ Pod::Spec.new do |s|
     es.dependency 'ExtensionKit/Foundation'
   end
   
-  s.subspec 'CoreStore' do |fs|
-    fs.source_files = 'ExtensionKit/CoreStore/**/*.swift'
-    fs.dependency 'CoreStore'
-  end
+#  s.subspec 'CoreStore' do |fs|
+#    fs.source_files = 'ExtensionKit/CoreStore/**/*.swift'
+#    fs.dependency 'CoreStore'
+#  end
 end
 
 
