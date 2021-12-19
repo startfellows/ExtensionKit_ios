@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   
   s.version          = '0.1.0'
   s.homepage         = 'https://github.com/kirill-kovalev/ExtensionKit'
-  s.source           = { :git => 'https://github.com/kirill-kovalev/ExtensionKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:kirill-kovalev/ExtensionKit.git', :tag => s.version.to_s }
   
   s.author           = { 'Kirill Kovalev' => 'kirilkovalev@yandex.ru' }
   s.summary          = 'A short description of ExtensionKit.'
