@@ -1,6 +1,6 @@
 # ExtensionKit
 
-[![CI Status](https://img.shields.io/travis/Kirill Kovalev/ExtensionKit.svg?style=flat)](https://travis-ci.org/Kirill Kovalev/ExtensionKit)
+[![CI Status](https://img.shields.io/travis/kirill-kovalev/ExtensionKit.svg?style=flat)](https://travis-ci.org/kirill-kovalev/ExtensionKit)
 [![Version](https://img.shields.io/cocoapods/v/ExtensionKit.svg?style=flat)](https://cocoapods.org/pods/ExtensionKit)
 [![License](https://img.shields.io/cocoapods/l/ExtensionKit.svg?style=flat)](https://cocoapods.org/pods/ExtensionKit)
 [![Platform](https://img.shields.io/cocoapods/p/ExtensionKit.svg?style=flat)](https://cocoapods.org/pods/ExtensionKit)
