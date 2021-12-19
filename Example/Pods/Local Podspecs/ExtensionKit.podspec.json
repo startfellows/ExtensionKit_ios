@@ -1,0 +1,47 @@
+{
+  "name": "ExtensionKit",
+  "version": "0.1.0",
+  "homepage": "https://github.com/kirill-kovalev/ExtensionKit",
+  "source": {
+    "git": "https://github.com/kirill-kovalev/ExtensionKit.git",
+    "tag": "0.1.0"
+  },
+  "authors": {
+    "Kirill Kovalev": "kirilkovalev@yandex.ru"
+  },
+  "summary": "A short description of ExtensionKit.",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "default_subspecs": "Foundation",
+  "subspecs": [
+    {
+      "name": "Foundation",
+      "frameworks": "Foundation",
+      "source_files": "ExtensionKit/Foundation/**/*.swift"
+    },
+    {
+      "name": "CoreGraphics",
+      "frameworks": "CoreGraphics",
+      "source_files": "ExtensionKit/CoreGraphics/**/*.swift",
+      "dependencies": {
+        "ExtensionKit/Foundation": [
+
+        ]
+      }
+    },
+    {
+      "name": "UIKit",
+      "frameworks": "UIKit",
+      "source_files": "ExtensionKit/UIKit/**/*.swift",
+      "dependencies": {
+        "ExtensionKit/CoreGraphics": [
+
+        ],
+        "ExtensionKit/Foundation": [
+
+        ]
+      }
+    }
+  ]
+}

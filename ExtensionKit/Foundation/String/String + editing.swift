@@ -19,7 +19,7 @@ public extension String {
         self = capitalizingFirstLetter()
     }
     
-    public func trimmed() -> String {
+    func trimmed() -> String {
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 

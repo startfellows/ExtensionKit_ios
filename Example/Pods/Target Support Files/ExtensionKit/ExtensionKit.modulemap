@@ -1,0 +1,6 @@
+framework module ExtensionKit {
+  umbrella header "ExtensionKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

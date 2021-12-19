@@ -1,0 +1,5 @@
+use_frameworks!
+target 'ExtensionKit_Tests' do
+  pod 'ExtensionKit/UIKit', :path => '../'
+  
+end

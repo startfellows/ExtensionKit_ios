@@ -5,7 +5,7 @@
 
 import UIKit
 
-private public extension UIScrollView {
+private extension UIScrollView {
     @discardableResult
     @NSManaged func _scrollToTopIfPossible(_ animated: ObjCBool) -> ObjCBool
 }
