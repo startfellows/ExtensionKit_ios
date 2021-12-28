@@ -2,8 +2,6 @@
 //  CGPoint + pointRelations.swift
 //  ExtensionKit
 //
-//  Created by Кирилл on 22.12.2021.
-//
 
 import CoreGraphics
 
