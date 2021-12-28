@@ -16,11 +16,11 @@ public extension CGSize {
     }
     
     static func * (left: CGSize, right: CGSize) -> CGSize {
-        return CGSize(width: left.width - right.width, height: left.width - right.width)
+        return CGSize(width: left.width * right.width, height: left.width * right.width)
     }
     
     static func / (left: CGSize, right: CGSize) -> CGSize {
-        return CGSize(width: left.width - right.width, height: left.width - right.width)
+        return CGSize(width: left.width / right.width, height: left.width / right.width)
     }
 }
 
@@ -56,10 +56,10 @@ public extension CGSize {
     }
     
     static func * (left: CGSize, right: CGFloat) -> CGSize {
-        return CGSize(width: left.width - right, height: left.width - right)
+        return CGSize(width: left.width * right, height: left.width * right)
     }
     
     static func / (left: CGSize, right: CGFloat) -> CGSize {
-        return CGSize(width: left.width - right, height: left.width - right)
+        return CGSize(width: left.width / right, height: left.width / right)
     }
 }
