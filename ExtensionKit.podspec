@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
 #  s.source_files = 'ExtensionKit/**/*.swift'
   s.ios.deployment_target = '11.0'
   
-  s.default_subspec = 'Foundation'
+  s.default_subspec = 'Full'
   
-  s.subspec 'Foundation' do |cs|
+  s.subspec 'Full' do |cs|
     cs.frameworks = 'Foundation'
     cs.source_files = 'ExtensionKit/Foundation/**/*.swift'
   end
@@ -38,6 +38,12 @@ Pod::Spec.new do |s|
     es.frameworks = 'UIKit'
     es.source_files = 'ExtensionKit/UIKit/**/*.swift'
     
+    es.dependency 'ExtensionKit/CoreGraphics'
+    es.dependency 'ExtensionKit/Foundation'
+  end
+  
+  s.subspec 'Full' do |es|
+    es.dependency 'ExtensionKit/UIKit'
     es.dependency 'ExtensionKit/CoreGraphics'
     es.dependency 'ExtensionKit/Foundation'
   end
