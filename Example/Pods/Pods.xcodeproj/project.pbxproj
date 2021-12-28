@@ -28,6 +28,10 @@
 		4E93F3317855BDD45B54D44B84AA8721 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77CB9340FB50BA6D5B04E6D1D1593077 /* CoreGraphics.framework */; };
 		4F0A8838D78A93A745A38DD6088C8F77 /* CGPoint + pointRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C343F08EAC11EF598F158AE1FAD61CCF /* CGPoint + pointRelations.swift */; };
 		603AD453277B832400F9292B /* CGSize + operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603AD452277B832400F9292B /* CGSize + operators.swift */; };
+		603AD496277B9E4E00F9292B /* CGRect + operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603AD495277B9E4E00F9292B /* CGRect + operators.swift */; };
+		603AD49A277B9E6600F9292B /* CGPoint + operators (CGFloat).swift in Sources */ = {isa = PBXBuildFile; fileRef = 603AD499277B9E6600F9292B /* CGPoint + operators (CGFloat).swift */; };
+		603AD49E277B9E8300F9292B /* CGSize + operators (CGFloat).swift in Sources */ = {isa = PBXBuildFile; fileRef = 603AD49D277B9E8300F9292B /* CGSize + operators (CGFloat).swift */; };
+		603AD4A2277B9F2900F9292B /* CGRect + operators (CGFloat).swift in Sources */ = {isa = PBXBuildFile; fileRef = 603AD4A1277B9F2900F9292B /* CGRect + operators (CGFloat).swift */; };
 		652D0D26E73296580E1435C8424087F1 /* UIEdgeInsets + init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0FEAF15028C74433B05EAE9CF780BB /* UIEdgeInsets + init.swift */; };
 		72E832FF471EBF3BC9603FADE28E01D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361EE39606F77A62E58D3A8534B4F6D7 /* UIKit.framework */; };
 		74708D8FDD0B95546141799C509FAC86 /* KeyPath + operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50D3C65AA18E64067695A4AE0FC84F /* KeyPath + operators.swift */; };
@@ -87,6 +91,10 @@
 		5DA5BC5999E3AC493E80934A05042CBD /* UIView + constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView + constraints.swift"; sourceTree = "<group>"; };
 		5DFFA2407F1CC22589B9A7C7FD56499C /* ExtensionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExtensionKit-prefix.pch"; sourceTree = "<group>"; };
 		603AD452277B832400F9292B /* CGSize + operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize + operators.swift"; sourceTree = "<group>"; };
+		603AD495277B9E4E00F9292B /* CGRect + operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect + operators.swift"; sourceTree = "<group>"; };
+		603AD499277B9E6600F9292B /* CGPoint + operators (CGFloat).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint + operators (CGFloat).swift"; sourceTree = "<group>"; };
+		603AD49D277B9E8300F9292B /* CGSize + operators (CGFloat).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize + operators (CGFloat).swift"; sourceTree = "<group>"; };
+		603AD4A1277B9F2900F9292B /* CGRect + operators (CGFloat).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect + operators (CGFloat).swift"; sourceTree = "<group>"; };
 		65B110D6A4C65BA9A4F0F69FF7910D1D /* ExtensionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExtensionKit-umbrella.h"; sourceTree = "<group>"; };
 		6F4A808FD094ABD52E10E1F570BBD371 /* String + editing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String + editing.swift"; sourceTree = "<group>"; };
 		6FA3B698A9641099F8C5FDAA22143959 /* String + regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String + regex.swift"; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 				8594ED57ADD72274259F779084FAC4A5 /* CGSize + init.swift */,
 				BDCA3346657B4672FF1F040395B0833E /* CGSize + inset.swift */,
 				603AD452277B832400F9292B /* CGSize + operators.swift */,
+				603AD49D277B9E8300F9292B /* CGSize + operators (CGFloat).swift */,
 			);
 			name = CGSize;
 			path = ExtensionKit/CoreGraphics/CGSize;
@@ -309,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				779356E69946839127A2049C191F4053 /* CGPoint + operators.swift */,
+				603AD499277B9E6600F9292B /* CGPoint + operators (CGFloat).swift */,
 				C343F08EAC11EF598F158AE1FAD61CCF /* CGPoint + pointRelations.swift */,
 			);
 			name = CGPoint;
@@ -387,6 +397,8 @@
 				C15B1039A61DE8CE469ADB8377E7A6F8 /* CGRect + Corners.swift */,
 				DEDA9EBD259B5B6991ED1D32D8060383 /* CGRect + init.swift */,
 				B0229A164DC5B3259A14AED3662DED92 /* CGRect + modificators.swift */,
+				603AD495277B9E4E00F9292B /* CGRect + operators.swift */,
+				603AD4A1277B9F2900F9292B /* CGRect + operators (CGFloat).swift */,
 			);
 			name = CGRect;
 			path = ExtensionKit/CoreGraphics/CGRect;
@@ -607,6 +619,7 @@
 				0361CC62612B081A49557EDAF2966F1D /* CGRect + modificators.swift in Sources */,
 				327CFB7A1045AF8743B0677BB785C87C /* CGSize + init.swift in Sources */,
 				FD09B3AF4A4E574038D5F4FE3BE5333E /* CGSize + inset.swift in Sources */,
+				603AD496277B9E4E00F9292B /* CGRect + operators.swift in Sources */,
 				E5EA8B5C6E643C786B6ABFE9559F7F1C /* Collection + map.swift in Sources */,
 				FF2BB2FC78D8C14BFFF470CD47BCD71F /* Collection + sort.swift in Sources */,
 				E319C1C7A0765B9752205E57A21A9495 /* Collection+subscript.swift in Sources */,
@@ -622,6 +635,7 @@
 				4ABD7A454CA4960FF7CB6259A75FE1B6 /* String + md5.swift in Sources */,
 				AD9F6EE77BC6D1ECE654984E42198885 /* String + regex.swift in Sources */,
 				B8F28EC57AB332DE4D8F40A02527BE65 /* String + subscript.swift in Sources */,
+				603AD49E277B9E8300F9292B /* CGSize + operators (CGFloat).swift in Sources */,
 				A9996E112307B0D9FBC26A301BEF4D47 /* String + URL.swift in Sources */,
 				4E722CF3347D55749B8D6499DE8A99B8 /* String + validation.swift in Sources */,
 				A9BFA836AF94DC5A2E740F4867995F80 /* UIButton + content.swift in Sources */,
@@ -629,9 +643,11 @@
 				C3A437A5CDDDC4EE1D45172901F74817 /* UICollectionView + reuse.swift in Sources */,
 				652D0D26E73296580E1435C8424087F1 /* UIEdgeInsets + init.swift in Sources */,
 				1AC74EDCA5A5E87AD4E612527665F915 /* UIEdgeInsets + inverted.swift in Sources */,
+				603AD49A277B9E6600F9292B /* CGPoint + operators (CGFloat).swift in Sources */,
 				847CB6994F562B54BBFE8772772C931D /* UIImage + tint.swift in Sources */,
 				0C1A570B5D468CC87FFE3C248F7D30B1 /* UIImage + view.swift in Sources */,
 				7BC9721CA1E1998EEA0B08F15B1EDD23 /* UIScrollView + pages.swift in Sources */,
+				603AD4A2277B9F2900F9292B /* CGRect + operators (CGFloat).swift in Sources */,
 				01F8791D9C5537459C07DE944AFCEB9B /* UIScrollView + scroll.swift in Sources */,
 				AA6A4DDC36DA592EFD171A7E170DA1EF /* UIScrollView + scrollToTop.swift in Sources */,
 				0F3C8D2161CBCEA72879B6FBDB76580A /* UITableView + reuse.swift in Sources */,
