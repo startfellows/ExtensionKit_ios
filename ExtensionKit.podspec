@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   
   s.default_subspec = 'Full'
   
-  s.subspec 'Full' do |cs|
+  s.subspec 'Foundation' do |cs|
     cs.frameworks = 'Foundation'
     cs.source_files = 'ExtensionKit/Foundation/**/*.swift'
   end
