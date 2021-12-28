@@ -63,3 +63,23 @@ public extension CGSize {
         return CGSize(width: left.width / right, height: left.width / right)
     }
 }
+
+public extension CGSize {
+
+    static func += (left: inout CGSize, right: CGFloat) {
+        left = left + right
+    }
+    
+    static func -= (left: inout CGSize, right: CGFloat) {
+        left = left - right
+    }
+    
+    static func *= (left: inout CGSize, right: CGFloat) {
+        left = left * right
+    }
+    
+    static func /= (left: inout CGSize, right: CGFloat) {
+        left = left / right
+    }
+    
+}
