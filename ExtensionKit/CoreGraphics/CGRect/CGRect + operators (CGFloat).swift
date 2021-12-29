@@ -16,11 +16,11 @@ public extension CGRect {
     }
     
     static func * (left: CGRect, right: CGFloat) -> CGRect {
-        return CGRect(origin: left.origin - right, size: left.size - right)
+        return CGRect(origin: left.origin * right, size: left.size * right)
     }
     
     static func / (left: CGRect, right: CGFloat) -> CGRect {
-        return CGRect(origin: left.origin - right, size: left.size - right)
+        return CGRect(origin: left.origin / right, size: left.size / right)
     }
 }
 
