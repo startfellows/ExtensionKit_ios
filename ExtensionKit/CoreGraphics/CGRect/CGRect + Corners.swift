@@ -7,7 +7,7 @@
 
 import CoreGraphics
 
-extension CGRect {
+public extension CGRect {
     
     var topLeft: CGPoint { origin }
     
