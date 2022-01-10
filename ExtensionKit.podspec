@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.swift_version = '5.0'
   
-  s.default_subspec = 'Full'
+  s.default_subspec = 'All'
   
   s.subspec 'Foundation' do |cs|
     cs.frameworks = 'Foundation'
@@ -43,10 +43,21 @@ Pod::Spec.new do |s|
     es.dependency 'ExtensionKit/Foundation'
   end
   
-  s.subspec 'Full' do |es|
-    es.dependency 'ExtensionKit/UIKit'
-    es.dependency 'ExtensionKit/CoreGraphics'
-    es.dependency 'ExtensionKit/Foundation'
+  s.subspec 'All' do |fs|
+    fs.dependency 'ExtensionKit/UIKit'
+    fs.dependency 'ExtensionKit/CoreGraphics'
+    fs.dependency 'ExtensionKit/Foundation'
+    fs.dependency 'ExtensionKit/BonMot'
+  end
+
+  s.subspec 'BonMot' do |gs|
+    gs.frameworks = 'UIKit'
+    gs.dependency 'BonMot'
+    gs.source_files = 'ExtensionKit/BonMot/**/*.swift'
+
+    # gs.dependency 'ExtensionKit/UIKit'
+    # gs.dependency 'ExtensionKit/CoreGraphics'
+    # gs.dependency 'ExtensionKit/Foundation'
   end
   
 #  s.subspec 'CoreStore' do |fs|
