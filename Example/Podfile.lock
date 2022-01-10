@@ -1,4 +1,12 @@
 PODS:
+  - BonMot (6.0.0)
+  - ExtensionKit/All (0.1.0):
+    - ExtensionKit/BonMot
+    - ExtensionKit/CoreGraphics
+    - ExtensionKit/Foundation
+    - ExtensionKit/UIKit
+  - ExtensionKit/BonMot (0.1.0):
+    - BonMot
   - ExtensionKit/CoreGraphics (0.1.0):
     - ExtensionKit/Foundation
   - ExtensionKit/Foundation (0.1.0)
@@ -7,15 +15,20 @@ PODS:
     - ExtensionKit/Foundation
 
 DEPENDENCIES:
-  - ExtensionKit/UIKit (from `../`)
+  - ExtensionKit/All (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - BonMot
 
 EXTERNAL SOURCES:
   ExtensionKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ExtensionKit: 0b5978609e82eba25954dc9a659f6e6bffa91646
+  BonMot: fb2b6a2209cb3149aca37b7131d49c051c04ae86
+  ExtensionKit: 6621f33372023d5ef5bf3fe5b96e26fad876c5a9
 
-PODFILE CHECKSUM: c9be9d4c0b3ad1cc633910379f58d4d516691f1e
+PODFILE CHECKSUM: 4e7e55e7920c139919458da0ed172acccc025b7d
 
 COCOAPODS: 1.10.2
