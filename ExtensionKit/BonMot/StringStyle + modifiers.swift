@@ -6,7 +6,7 @@
 import UIKit
 import BonMot
 
-extension StringStyle {
+public extension StringStyle {
     
     func extraAttributes(_ arg: StyleAttributes) -> StringStyle{
         self.byAdding(.extraAttributes(arg))
