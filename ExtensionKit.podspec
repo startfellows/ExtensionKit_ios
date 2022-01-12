@@ -43,23 +43,26 @@ Pod::Spec.new do |s|
     es.dependency 'ExtensionKit/Foundation'
   end
   
+  s.subspec 'BonMot' do |gs|
+    gs.frameworks = 'UIKit'
+    gs.dependency 'BonMot'
+    gs.source_files = 'ExtensionKit/BonMot/**/*.swift'
+  end
+  
+  s.subspec 'R.swift' do |gs|
+    gs.frameworks = 'UIKit'
+    gs.dependency 'R.swift'
+    gs.source_files = 'ExtensionKit/R.swift/**/*.swift'
+  end
+
   s.subspec 'All' do |fs|
     fs.dependency 'ExtensionKit/UIKit'
     fs.dependency 'ExtensionKit/CoreGraphics'
     fs.dependency 'ExtensionKit/Foundation'
     fs.dependency 'ExtensionKit/BonMot'
+    fs.dependency 'ExtensionKit/R.swift'
   end
 
-  s.subspec 'BonMot' do |gs|
-    gs.frameworks = 'UIKit'
-    gs.dependency 'BonMot'
-    gs.source_files = 'ExtensionKit/BonMot/**/*.swift'
-
-    # gs.dependency 'ExtensionKit/UIKit'
-    # gs.dependency 'ExtensionKit/CoreGraphics'
-    # gs.dependency 'ExtensionKit/Foundation'
-  end
-  
 #  s.subspec 'CoreStore' do |fs|
 #    fs.source_files = 'ExtensionKit/CoreStore/**/*.swift'
 #    fs.dependency 'CoreStore'
