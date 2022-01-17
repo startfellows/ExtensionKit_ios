@@ -8,208 +8,208 @@ import BonMot
 
 public extension BonMot.StringStyle {
     
-    static func extraAttributes(_ arg: StyleAttributes) -> BonMot.StringStyle {
-        BonMot.StringStyle(.extraAttributes(arg))
+    func extraAttributes(_ arg: StyleAttributes) -> BonMot.StringStyle{
+        self.byAdding(.extraAttributes(arg))
     }
     
-    static func font(_ arg: BONFont) -> BonMot.StringStyle {
-        BonMot.StringStyle(.font(arg))
+    func font(_ arg: BONFont) -> BonMot.StringStyle {
+        self.byAdding(.font(arg))
     }
     
-    static func link(_ arg: URL) -> BonMot.StringStyle {
-        BonMot.StringStyle(.link(arg))
+    func link(_ arg: URL) -> BonMot.StringStyle {
+        self.byAdding(.link(arg))
     }
     
-    static func backgroundColor(_ arg: BONColor) -> BonMot.StringStyle {
-        BonMot.StringStyle(.backgroundColor(arg))
+    func backgroundColor(_ arg: BONColor) -> BonMot.StringStyle {
+        self.byAdding(.backgroundColor(arg))
     }
     
-    static func color(_ arg: BONColor) -> BonMot.StringStyle {
-        BonMot.StringStyle(.color(arg))
+    func color(_ arg: BONColor) -> BonMot.StringStyle {
+        self.byAdding(.color(arg))
     }
     
-    static func underline(_ style: NSUnderlineStyle, _ color: BONColor?) -> BonMot.StringStyle {
-        BonMot.StringStyle(.underline(style, color))
+    func underline(_ style: NSUnderlineStyle, _ color: BONColor?) -> BonMot.StringStyle {
+        self.byAdding(.underline(style, color))
     }
     
-    static func strikethrough(_ style: NSUnderlineStyle, _ color: BONColor?) -> BonMot.StringStyle {
-        BonMot.StringStyle(.strikethrough(style, color))
+    func strikethrough(_ style: NSUnderlineStyle, _ color: BONColor?) -> BonMot.StringStyle {
+        self.byAdding(.strikethrough(style, color))
     }
     
-    static func baselineOffset(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.baselineOffset(arg))
+    func baselineOffset(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.baselineOffset(arg))
     }
     
     /// If set to `true`, when the string is read aloud, all punctuation will
     /// be spoken aloud as well.
-    static func speaksPunctuation(_ arg: Bool) -> BonMot.StringStyle {
-        BonMot.StringStyle(.speaksPunctuation(arg))
+    func speaksPunctuation(_ arg: Bool) -> BonMot.StringStyle {
+        self.byAdding(.speaksPunctuation(arg))
     }
 
-    static func speakingLanguage(_ arg: String) -> BonMot.StringStyle {
-        BonMot.StringStyle(.speakingLanguage(arg))
+    func speakingLanguage(_ arg: String) -> BonMot.StringStyle {
+        self.byAdding(.speakingLanguage(arg))
     }
     
     /// The pitch of the voice used to read the text aloud. The range is
     /// 0 to 2, where 0 is the lowest, 2 is the highest, and 1 is the default.
-    static func speakingPitch(_ arg: Double) -> BonMot.StringStyle {
-        BonMot.StringStyle(.speakingPitch(arg))
+    func speakingPitch(_ arg: Double) -> BonMot.StringStyle {
+        self.byAdding(.speakingPitch(arg))
     }
     
     /// The IPA pronunciation of the given range.
-    static func speakingPronunciation(_ arg: String) -> BonMot.StringStyle {
-        BonMot.StringStyle(.speakingPronunciation(arg))
+    func speakingPronunciation(_ arg: String) -> BonMot.StringStyle {
+        self.byAdding(.speakingPronunciation(arg))
     }
     
     /// Whether the spoken text is queued behind, or interrupts, existing spoken content.
-    static func shouldQueueSpeechAnnouncement(_ arg: Bool) -> BonMot.StringStyle {
-        BonMot.StringStyle(.shouldQueueSpeechAnnouncement(arg))
+    func shouldQueueSpeechAnnouncement(_ arg: Bool) -> BonMot.StringStyle {
+        self.byAdding(.shouldQueueSpeechAnnouncement(arg))
     }
     
     /// The accessibility heading level of the text.
-    static func headingLevel(_ arg: HeadingLevel) -> BonMot.StringStyle {
-        BonMot.StringStyle(.headingLevel(arg))
+    func headingLevel(_ arg: HeadingLevel) -> BonMot.StringStyle {
+        self.byAdding(.headingLevel(arg))
     }
 
-    static func ligatures(_ arg: Ligatures) -> BonMot.StringStyle {
-        BonMot.StringStyle(.ligatures(arg))
+    func ligatures(_ arg: Ligatures) -> BonMot.StringStyle {
+        self.byAdding(.ligatures(arg))
     }
     
-    static func alignment(_ arg: NSTextAlignment) -> BonMot.StringStyle {
-        BonMot.StringStyle(.alignment(arg))
+    func alignment(_ arg: NSTextAlignment) -> BonMot.StringStyle {
+        self.byAdding(.alignment(arg))
     }
     
-    static func tracking(_ arg: Tracking) -> BonMot.StringStyle {
-        BonMot.StringStyle(.tracking(arg))
-    }
-    
-    
-    static func tracking(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.tracking(.point(arg)))
+    func tracking(_ arg: Tracking) -> BonMot.StringStyle {
+        self.byAdding(.tracking(arg))
     }
     
     
-    static func lineSpacing(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.lineSpacing(arg))
+    func tracking(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.tracking(.point(arg)))
     }
     
-    static func paragraphSpacingAfter(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.paragraphSpacingAfter(arg))
+    
+    func lineSpacing(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.lineSpacing(arg))
     }
     
-    static func firstLineHeadIndent(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.firstLineHeadIndent(arg))
+    func paragraphSpacingAfter(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.paragraphSpacingAfter(arg))
     }
     
-    static func headIndent(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.headIndent(arg))
+    func firstLineHeadIndent(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.firstLineHeadIndent(arg))
     }
     
-    static func tailIndent(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.tailIndent(arg))
+    func headIndent(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.headIndent(arg))
     }
     
-    static func lineBreakMode(_ arg: NSLineBreakMode) -> BonMot.StringStyle {
-        BonMot.StringStyle(.lineBreakMode(arg))
+    func tailIndent(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.tailIndent(arg))
     }
     
-    static func minimumLineHeight(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.minimumLineHeight(arg))
+    func lineBreakMode(_ arg: NSLineBreakMode) -> BonMot.StringStyle {
+        self.byAdding(.lineBreakMode(arg))
     }
     
-    static func maximumLineHeight(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.maximumLineHeight(arg))
+    func minimumLineHeight(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.minimumLineHeight(arg))
     }
     
-    static func baseWritingDirection(_ arg: NSWritingDirection) -> BonMot.StringStyle {
-        BonMot.StringStyle(.baseWritingDirection(arg))
+    func maximumLineHeight(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.maximumLineHeight(arg))
     }
     
-    static func lineHeightMultiple(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.lineHeightMultiple(arg))
+    func baseWritingDirection(_ arg: NSWritingDirection) -> BonMot.StringStyle {
+        self.byAdding(.baseWritingDirection(arg))
     }
     
-    static func paragraphSpacingBefore(_ arg: CGFloat) -> BonMot.StringStyle {
-        BonMot.StringStyle(.paragraphSpacingBefore(arg))
+    func lineHeightMultiple(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.lineHeightMultiple(arg))
     }
     
-    static func allowsDefaultTighteningForTruncation(_ arg: Bool) -> BonMot.StringStyle {
-        BonMot.StringStyle(.allowsDefaultTighteningForTruncation(arg))
-    }
-
-    static func hyphenationFactor(_ arg: Float) -> BonMot.StringStyle {
-        BonMot.StringStyle(.hyphenationFactor(arg))
+    func paragraphSpacingBefore(_ arg: CGFloat) -> BonMot.StringStyle {
+        self.byAdding(.paragraphSpacingBefore(arg))
     }
     
-    static func xml() -> BonMot.StringStyle {
-        BonMot.StringStyle(.xml)
-    }
-    
-    static func xmlRules(_ arg: [XMLStyleRule]) -> BonMot.StringStyle {
-        BonMot.StringStyle(.xmlRules(arg))
-    }
-    
-    static func xmlStyler(_ arg: XMLStyler) -> BonMot.StringStyle {
-        BonMot.StringStyle(.xmlStyler(arg))
-    }
-    
-    static func transform(_ arg: Transform) -> BonMot.StringStyle {
-        BonMot.StringStyle(.transform(arg))
+    func allowsDefaultTighteningForTruncation(_ arg: Bool) -> BonMot.StringStyle {
+        self.byAdding(.allowsDefaultTighteningForTruncation(arg))
     }
 
-    static func fontFeature(_ arg: FontFeatureProvider) -> BonMot.StringStyle {
-        BonMot.StringStyle(.fontFeature(arg))
+    func hyphenationFactor(_ arg: Float) -> BonMot.StringStyle {
+        self.byAdding(.hyphenationFactor(arg))
     }
     
-    static func numberSpacing(_ arg: NumberSpacing) -> BonMot.StringStyle {
-        BonMot.StringStyle(.numberSpacing(arg))
+    func xml() -> BonMot.StringStyle {
+        self.byAdding(.xml)
     }
     
-    static func numberCase(_ arg: NumberCase) -> BonMot.StringStyle {
-        BonMot.StringStyle(.numberCase(arg))
+    func xmlRules(_ arg: [XMLStyleRule]) -> BonMot.StringStyle {
+        self.byAdding(.xmlRules(arg))
     }
     
-    static func fractions(_ arg: Fractions) -> BonMot.StringStyle {
-        BonMot.StringStyle(.fractions(arg))
+    func xmlStyler(_ arg: XMLStyler) -> BonMot.StringStyle {
+        self.byAdding(.xmlStyler(arg))
     }
     
-    static func superscript(_ arg: Bool) -> BonMot.StringStyle {
-        BonMot.StringStyle(.superscript(arg))
+    func transform(_ arg: Transform) -> BonMot.StringStyle {
+        self.byAdding(.transform(arg))
+    }
+
+    func fontFeature(_ arg: FontFeatureProvider) -> BonMot.StringStyle {
+        self.byAdding(.fontFeature(arg))
     }
     
-    static func `subscript`(_ arg: Bool) -> BonMot.StringStyle {
-        BonMot.StringStyle(.subscript(arg))
+    func numberSpacing(_ arg: NumberSpacing) -> BonMot.StringStyle {
+        self.byAdding(.numberSpacing(arg))
     }
     
-    static func ordinals(_ arg: Bool) -> BonMot.StringStyle {
-        BonMot.StringStyle(.ordinals(arg))
+    func numberCase(_ arg: NumberCase) -> BonMot.StringStyle {
+        self.byAdding(.numberCase(arg))
     }
     
-    static func scientificInferiors(_ arg: Bool) -> BonMot.StringStyle {
-        BonMot.StringStyle(.scientificInferiors(arg))
+    func fractions(_ arg: Fractions) -> BonMot.StringStyle {
+        self.byAdding(.fractions(arg))
     }
     
-    static func smallCaps(_ arg: SmallCaps) -> BonMot.StringStyle {
-        BonMot.StringStyle(.smallCaps(arg))
+    func superscript(_ arg: Bool) -> BonMot.StringStyle {
+        self.byAdding(.superscript(arg))
     }
     
-    static func stylisticAlternates(_ arg: StylisticAlternates) -> BonMot.StringStyle {
-        BonMot.StringStyle(.stylisticAlternates(arg))
+    func `subscript`(_ arg: Bool) -> BonMot.StringStyle {
+        self.byAdding(.subscript(arg))
     }
     
-    static func contextualAlternates(_ arg: ContextualAlternates) -> BonMot.StringStyle {
-        BonMot.StringStyle(.contextualAlternates(arg))
+    func ordinals(_ arg: Bool) -> BonMot.StringStyle {
+        self.byAdding(.ordinals(arg))
     }
     
-    static func textStyle(_ arg: BonMotTextStyle) -> BonMot.StringStyle {
-        BonMot.StringStyle(.textStyle(arg))
+    func scientificInferiors(_ arg: Bool) -> BonMot.StringStyle {
+        self.byAdding(.scientificInferiors(arg))
     }
     
-    static func adapt(_ arg: AdaptiveStyle) -> BonMot.StringStyle {
-        BonMot.StringStyle(.adapt(arg))
+    func smallCaps(_ arg: SmallCaps) -> BonMot.StringStyle {
+        self.byAdding(.smallCaps(arg))
     }
     
-    static func emphasis(_ arg: Emphasis) -> BonMot.StringStyle {
-        BonMot.StringStyle(.emphasis(arg))
+    func stylisticAlternates(_ arg: StylisticAlternates) -> BonMot.StringStyle {
+        self.byAdding(.stylisticAlternates(arg))
+    }
+    
+    func contextualAlternates(_ arg: ContextualAlternates) -> BonMot.StringStyle {
+        self.byAdding(.contextualAlternates(arg))
+    }
+    
+    func textStyle(_ arg: BonMotTextStyle) -> BonMot.StringStyle {
+        self.byAdding(.textStyle(arg))
+    }
+    
+    func adapt(_ arg: AdaptiveStyle) -> BonMot.StringStyle {
+        self.byAdding(.adapt(arg))
+    }
+    
+    func emphasis(_ arg: Emphasis) -> BonMot.StringStyle {
+        self.byAdding(.emphasis(arg))
     }
 }
