@@ -8,7 +8,7 @@ import Foundation
 public extension Collection {
     func at(_ index: Index) -> Element? {
         guard index >= self.startIndex,
-              index <= self.endIndex
+              index < self.endIndex
         else { return nil }
 
         return self[index]
