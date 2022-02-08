@@ -37,6 +37,14 @@ public func !=<T, V: Equatable>(lhs: KeyPath<T, V>, rhs: V) -> Predicate<T> {
     return { $0[keyPath: lhs] != rhs }
 }
 
+public func ===<T, V: AnyObject>(lhs: KeyPath<T, V>, rhs: V) -> Predicate<T> {
+    return { $0[keyPath: lhs] === rhs }
+}
+
+public func !==<T, V: AnyObject>(lhs: KeyPath<T, V>, rhs: V) -> Predicate<T> {
+    return { $0[keyPath: lhs] !== rhs }
+}
+
 public func ><T, V: Comparable>(lhs: KeyPath<T, V>, rhs: V) -> Predicate<T> {
     return { $0[keyPath: lhs] > rhs }
 }
