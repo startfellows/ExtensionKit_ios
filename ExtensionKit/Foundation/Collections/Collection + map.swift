@@ -15,4 +15,8 @@ public extension Collection {
         return compactMap({ $0 as? ElementOfResult })
     }
   
+    func filter<CheckType>(is: CheckType.Type = CheckType.self) -> [Element] {
+        return filter({ $0 is CheckType })
+    }
+  
 }
