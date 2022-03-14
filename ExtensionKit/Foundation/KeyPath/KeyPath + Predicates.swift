@@ -51,6 +51,18 @@ public extension KeyPath where Value: Equatable {
         return { $0[keyPath: lhs] != rhs }
     }
 }
+
+// MARK: - Combine keypaths with nil
+public extension KeyPath {
+    
+    public static func ==(lhs: KeyPath<Root, Value?>, rhs: _OptionalNilComparisonType) -> Predicate<Root> {
+        return { $0[keyPath: lhs] == rhs }
+    }
+    
+    public static func !=(lhs: KeyPath<Root, Value?>, rhs: _OptionalNilComparisonType) -> Predicate<Root> {
+        return { $0[keyPath: lhs] != rhs }
+    }
+}
     
 public extension KeyPath where Value: AnyObject {
     // MARK: - Combine keypaths with objects
