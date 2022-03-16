@@ -1,5 +1,6 @@
 import UIKit
-extension UIImage {
+
+public extension UIImage {
     func avarageColor() -> UIColor {
         var bitmap = [UInt8](repeating: 0, count: 4)
         let context = CIContext()
