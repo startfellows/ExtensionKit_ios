@@ -1,7 +1,7 @@
 import UIKit
 
 public extension UIImage {
-    func avarageColor() -> UIColor {
+    func averageColor() -> UIColor {
         var bitmap = [UInt8](repeating: 0, count: 4)
         let context = CIContext()
         let inputImage: CIImage = ciImage ?? CoreImage.CIImage(cgImage: cgImage!)
