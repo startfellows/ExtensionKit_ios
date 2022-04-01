@@ -15,6 +15,7 @@ public extension UIColor {
     }
     
     convenience init(hex: String) {
+        let hex = hex.filter(\.isHexDigit)
         let scanner = Scanner(string: hex)
         
         var rgbValue: UInt64 = 0
