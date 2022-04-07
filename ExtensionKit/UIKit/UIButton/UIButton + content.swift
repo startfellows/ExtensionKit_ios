@@ -17,7 +17,7 @@ public extension UIButton {
         contentEdgeInsets.right += insetAmount
     }
 
-    func alignVertical(spacing: Float = 4.0) {
+    func alignVertical(spacing: CGFloat = 4.0) {
         guard let imageSize = imageView?.image?.size,
             let text = titleLabel?.text,
             let font = titleLabel?.font else { return }
@@ -27,7 +27,7 @@ public extension UIButton {
         let titleSize = labelString.size(withAttributes: [.font: font])
         imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + CGFloat(spacing)), left: 0.0,
                                        bottom: 0.0, right: -titleSize.width)
-        let edgeOffset = abs(titleSize.height - imageSize.height) / 2.0
+        let edgeOffset = abs(titleSize.height - imageSize.height) / 2.0 - spacing
         contentEdgeInsets = UIEdgeInsets(top: edgeOffset, left: 0.0, bottom: edgeOffset, right: 0.0)
     }
 
