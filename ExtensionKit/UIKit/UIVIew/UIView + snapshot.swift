@@ -1,9 +1,9 @@
 import UIKit
 
 public extension UIView {
-    func imageSnapshot() -> UIImage? {
-        UIGraphicsImageRenderer().image(actions: {
-            layer.draw(in: $0.cgContext)
+    func imageSnapshot() -> UIImage {
+        UIGraphicsImageRenderer(bounds: bounds).image(actions: { _ in
+            drawHierarchy(in: bounds, afterScreenUpdates: true)
         })
     }
 }
