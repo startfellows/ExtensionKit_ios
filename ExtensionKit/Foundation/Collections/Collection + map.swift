@@ -5,7 +5,7 @@
 
 import Foundation
 
-public extension Collection {
+public extension Sequence {
   
     func compact<T>() -> [T] where Element == T? {
         return self.compactMap({ $0 })
