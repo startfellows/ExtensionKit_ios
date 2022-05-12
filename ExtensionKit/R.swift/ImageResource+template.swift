@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ImageResource+template.swift
 //  ExtensionKit
 //
 //  Created by Кирилл on 12.01.2022.
@@ -15,5 +15,4 @@ public extension ImageResource {
     var original: UIImage? {
         UIImage(named: name, in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysOriginal)
     }
-
 }
