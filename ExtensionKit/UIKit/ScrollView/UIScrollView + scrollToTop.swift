@@ -1,28 +1,26 @@
 //
-//  SCrollView.swift
+//  UIScrollView + scrollToTop.swift
 //  ExtensionKit
 //
 
 import UIKit
 
-private extension UIScrollView {
-    @discardableResult
-    @NSManaged func _scrollToTopIfPossible(_ animated: ObjCBool) -> ObjCBool
-}
-
 public extension UIScrollView {
     
     @objc func scrollToTopIfPossible(animated: Bool) {
-        if responds(to: #selector(UIScrollView._scrollToTopIfPossible)) {
-            _scrollToTopIfPossible(ObjCBool(animated))
+        
+        //_scrollToTopIfPossible:
+        let selector = NSSelectorFromString("X3Njcm9sbFRvVG9wSWZQb3NzaWJsZToK".base64Decoded!)
+        
+        if responds(to: selector) {
+            perform(selector, with: ObjCBool(animated))
         } else {
             scrollToTop(animated: animated)
         }
     }
     
-    func scrollToTop(animated: Bool) {
+    private func scrollToTop(animated: Bool) {
         self.setContentOffset(CGPoint(x: contentOffset.x, y: -contentInset.top), animated: animated)
     }
     
 }
-
