@@ -2,19 +2,19 @@ import UIKit
 
 public extension UIView {
     public struct Border {
-        var width: CGFloat
-        var color: UIColor
+        public var width: CGFloat
+        public var color: UIColor?
     }
     
     var border: Border {
         get {
             .init(width: layer.borderWidth,
-                  color: .init(cgColor: layer.borderColor ?? UIColor.clear.cgColor))
+                  color: layer.borderColor.map(UIColor.init))
             
         }
         
         set {
-            layer.borderColor = newValue.color.cgColor
+            layer.borderColor = newValue.color?.cgColor
             layer.borderWidth = newValue.width
         }
         
