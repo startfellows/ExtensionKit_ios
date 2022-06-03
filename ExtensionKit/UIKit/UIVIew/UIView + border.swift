@@ -9,7 +9,8 @@ public extension UIView {
     var border: Border {
         get {
             .init(width: layer.borderWidth,
-                  color: .init(cgColor: layer.borderColor ?? UIColor.clear.cgColor)
+                  color: .init(cgColor: layer.borderColor ?? UIColor.clear.cgColor))
+            
         }
         
         set {
