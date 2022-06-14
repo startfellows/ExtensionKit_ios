@@ -132,3 +132,14 @@ public extension KeyPath {
         return { $0[keyPath: lhs] ?? $0[keyPath: rhs] }
     }
 }
+
+
+@inlinable @inline(__always)
+public func ??<T, V>(lhs: @escaping Equation<T, V?>, rhs: V) -> Equation<T, V> {
+    return { lhs($0) ?? rhs }
+}
+
+@inlinable @inline(__always)
+public func ??<T, V>(lhs: @escaping Equation<T, V?>, rhs: V?) -> Equation<T, V?> {
+    return { lhs($0) ?? rhs }
+}
