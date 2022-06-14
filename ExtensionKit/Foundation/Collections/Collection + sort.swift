@@ -27,3 +27,20 @@ public extension Collection {
     }
 }
 
+public extension Collection {
+
+    func sorted<T: Comparable>(asc equation: Equation<Element, T>) -> [Element] {
+        return sorted(by: equation, >)
+    }
+    
+    func sorted<T: Comparable>(desc equation: Equation<Element, T>) -> [Element] {
+        return sorted(by: equation, <)
+    }
+    
+    func sorted<T>(by equation: Equation<Element, T>, _ comparator: (T, T) -> Bool) -> [Element] {
+        return sorted(by: {
+            comparator(equation($0), equation($1))
+        })
+    }
+}
+
