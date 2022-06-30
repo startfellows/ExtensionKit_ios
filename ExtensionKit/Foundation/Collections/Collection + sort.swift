@@ -44,3 +44,27 @@ public extension Collection {
     }
 }
 
+
+public extension Collection {
+
+    func sorted(asc equation: Equation<Element, Bool>) -> [Element] {
+        return sorted(by: equation, { !$1 })
+    }
+    
+    func sorted(desc equation: Equation<Element, Bool>) -> [Element] {
+        return sorted(by: equation, { $1 })
+    }
+}
+
+public extension Collection {
+    
+    func sorted(asc keyPath: KeyPath<Element, Bool>) -> [Element] {
+        return sorted(by: keyPath, { !$1 })
+    }
+    
+    func sorted(desc keyPath: KeyPath<Element, Bool>) -> [Element] {
+        return sorted(by: keyPath, { $1 })
+    }
+}
+
+
