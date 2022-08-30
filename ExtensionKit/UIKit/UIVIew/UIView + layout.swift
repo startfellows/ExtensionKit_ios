@@ -1,5 +1,5 @@
 //
-//  UIView + constraints.swift
+//  UIView + layout.swift
 //  ExtensionKit
 //
 
