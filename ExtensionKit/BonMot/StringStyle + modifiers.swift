@@ -212,4 +212,13 @@ public extension BonMot.StringStyle {
     func emphasis(_ arg: Emphasis) -> BonMot.StringStyle {
         self.byAdding(.emphasis(arg))
     }
+    
+    func erasingLineHeight() -> Self {
+        var copy = self
+        copy.lineHeightMultiple = nil
+        copy.minimumLineHeight = nil
+        copy.maximumLineHeight = nil
+        
+        return copy
+    }
 }
