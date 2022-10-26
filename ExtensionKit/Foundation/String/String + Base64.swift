@@ -5,12 +5,12 @@
 
 import Foundation
 
-public extension String {
+public extension StringProtocol {
     
     var base64Encoded: String? { data(using: .utf8)?.base64EncodedString() }
 
     var base64Decoded: String? {
-        if let data = Data(base64Encoded: self) {
+        if let data = Data(base64Encoded: String(self)) {
             return String(data: data, encoding: .utf8)
         }
         return nil
