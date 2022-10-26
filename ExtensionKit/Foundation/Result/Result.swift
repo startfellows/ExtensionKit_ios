@@ -10,8 +10,8 @@ public extension Result {
     
     var isSuccess: Bool {
         switch self {
-        case .success: return truefalse
-        case .failure: return true
+        case .success: return true
+        case .failure: return false
         }
     }
 }
