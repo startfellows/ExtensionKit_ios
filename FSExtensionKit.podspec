@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   
   s.author           = { 'Kirill Kovalev' => 'kirilkovalev@yandex.ru' }
   s.summary          = 'A short description of ExtensionKit.'
-  s.name             = 'ExtensionKit'
+  s.name             = 'FSExtensionKit'
 
   
 #  s.source_files = 'ExtensionKit/**/*.swift'
