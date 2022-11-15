@@ -32,35 +32,35 @@ Pod::Spec.new do |s|
     ds.frameworks = 'CoreGraphics'
     ds.source_files = 'ExtensionKit/CoreGraphics/**/*.swift'
   
-    ds.dependency 'ExtensionKit/Foundation'
+    ds.dependency 'FSExtensionKit/Foundation'
   end
   
   s.subspec 'UIKit' do |es|
     es.frameworks = 'UIKit'
     es.source_files = 'ExtensionKit/UIKit/**/*.swift'
     
-    es.dependency 'ExtensionKit/CoreGraphics'
-    es.dependency 'ExtensionKit/Foundation'
+    es.dependency 'FSExtensionKit/CoreGraphics'
+    es.dependency 'FSExtensionKit/Foundation'
   end
   
   s.subspec 'BonMot' do |gs|
     gs.frameworks = 'UIKit'
     gs.dependency 'BonMot'
-    gs.source_files = 'ExtensionKit/BonMot/**/*.swift'
+    gs.source_files = 'FSExtensionKit/BonMot/**/*.swift'
   end
   
   s.subspec 'R.swift' do |gs|
     gs.frameworks = 'UIKit'
     gs.dependency 'R.swift'
-    gs.source_files = 'ExtensionKit/R.swift/**/*.swift'
+    gs.source_files = 'FSExtensionKit/R.swift/**/*.swift'
   end
 
   s.subspec 'All' do |fs|
-    fs.dependency 'ExtensionKit/UIKit'
-    fs.dependency 'ExtensionKit/CoreGraphics'
-    fs.dependency 'ExtensionKit/Foundation'
-    fs.dependency 'ExtensionKit/BonMot'
-    fs.dependency 'ExtensionKit/R.swift'
+    fs.dependency 'FSExtensionKit/UIKit'
+    fs.dependency 'FSExtensionKit/CoreGraphics'
+    fs.dependency 'FSExtensionKit/Foundation'
+    fs.dependency 'FSExtensionKit/BonMot'
+    fs.dependency 'FSExtensionKit/R.swift'
   end
 
 #  s.subspec 'CoreStore' do |fs|
