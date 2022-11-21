@@ -46,13 +46,13 @@ Pod::Spec.new do |s|
   s.subspec 'BonMot' do |gs|
     gs.frameworks = 'UIKit'
     gs.dependency 'BonMot'
-    gs.source_files = 'FSExtensionKit/BonMot/**/*.swift'
+    gs.source_files = 'ExtensionKit/BonMot/**/*.swift'
   end
   
   s.subspec 'R.swift' do |gs|
     gs.frameworks = 'UIKit'
     gs.dependency 'R.swift'
-    gs.source_files = 'FSExtensionKit/R.swift/**/*.swift'
+    gs.source_files = 'ExtensionKit/R.swift/**/*.swift'
   end
 
   s.subspec 'All' do |fs|
