@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
     fs.dependency 'FSExtensionKit/CoreGraphics'
     fs.dependency 'FSExtensionKit/Foundation'
     fs.dependency 'FSExtensionKit/BonMot'
-    fs.dependency 'FSExtensionKit/R.swift', "~> 6.1.0"
+    fs.dependency 'FSExtensionKit/R.swift'
   end
 
 #  s.subspec 'CoreStore' do |fs|
