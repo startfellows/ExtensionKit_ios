@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'R.swift' do |gs|
     gs.frameworks = 'UIKit'
-    gs.dependency 'R.swift'
+    gs.dependency 'R.swift', '6.1.0'
     gs.source_files = 'ExtensionKit/R.swift/**/*.swift'
   end
 
