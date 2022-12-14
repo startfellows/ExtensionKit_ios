@@ -1,7 +1,12 @@
 import UIKit
 
 public extension UIView {
-    public struct Border {
+    struct Border {
+        public init(width: CGFloat, color: UIColor?) {
+            self.width = width
+            self.color = color
+        }
+        
         public var width: CGFloat
         public var color: UIColor?
     }
