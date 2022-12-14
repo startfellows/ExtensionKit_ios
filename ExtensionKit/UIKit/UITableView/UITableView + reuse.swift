@@ -29,4 +29,8 @@ public extension UITableView {
     func dequeue<T: UITableViewHeaderFooterView>(_ type: T.Type = T.self) -> T? {
         self.dequeueReusableHeaderFooterView(withIdentifier: T.reueseIdentifier) as? T
     }
+    
+    func cellForRow<T>(_ type: T.Type = T.self, at indexPath: IndexPath) -> T? {
+        self.cellForRow(at: indexPath) as? T
+    }
 }
