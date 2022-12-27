@@ -15,3 +15,7 @@ public extension Result {
         }
     }
 }
+
+public extension Result where Success == Void {
+    static func success() -> Self { .success(()) }
+}
