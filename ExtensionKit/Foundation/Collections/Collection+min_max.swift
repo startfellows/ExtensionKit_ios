@@ -24,6 +24,6 @@ public extension Collection {
     }
     
     func min<T: Comparable>(by keyPath: KeyPath<Element, T>) -> Element? {
-        max(by: keyPath, >)
+        min(by: keyPath, >)
     }
 }
