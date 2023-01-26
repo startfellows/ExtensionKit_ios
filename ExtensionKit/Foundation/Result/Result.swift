@@ -17,5 +17,9 @@ public extension Result {
 }
 
 public extension Result where Success == Void {
-    static func success() -> Self { .success(()) }
+    static var success: Self { .success(()) }
+}
+
+public extension Result where Success == Any? {
+    static var success: Self { .success(nil) }
 }
